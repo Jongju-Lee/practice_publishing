@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.5rem;
+}
+.main {
+  margin: auto;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.main button {
+  width: inherit;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background-color: yellowgreen;
+  cursor: pointer;
+  font-size: 20px;
+}
+.sub {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  display: none;
+}
+.main:hover .sub {
+  display: block;
+}
+.sub a {
+  display: block;
+  height: 50px;
+  padding: 10px;
+  color: #000;
+  background-color: #eee;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.sub a:hover {
+  opacity: 1;
+}
