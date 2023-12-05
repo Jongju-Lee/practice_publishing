@@ -1,0 +1,32 @@
+body {
+  background-color: royalblue;
+}
+.gnb {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+.gnb a {
+  display: block;
+  font-size: 40px;
+  margin: 15px 0;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.gnb:hover a {
+  opacity: 0.3;
+}
+.gnb a:hover {
+  opacity: 1;
+}
+.gnb a::before {
+  content: ">";
+  margin-right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.gnb a:hover::before {
+  opacity: 1;
+}

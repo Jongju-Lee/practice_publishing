@@ -1,0 +1,45 @@
+* {
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.icon {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 10px;
+}
+.icon img {
+}
+.icon span {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.icon span::after {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+}
+.icon:hover span {
+  visibility: visible;
+  opacity: 1;
+}
