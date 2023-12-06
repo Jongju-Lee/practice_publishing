@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  line-height: 1.5em;
+  height: 100vh;
+  background: linear-gradient(#25d366, #fffc00);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.nav {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 15px;
+  padding: 10px;
+}
+.nav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+.nav a::before,
+.nav a::after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  content: attr(data-link);
+  transition: 0.3s;
+}
+.nav a::before {
+  top: 0;
+}
+.nav a::after {
+  top: 100%;
+  color: yellowgreen;
+}
+.nav a:hover::before {
+  top: -100%;
+}
+.nav a:hover::after {
+  top: 0;
+}
