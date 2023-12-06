@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill-progress {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.skill-progress h1 {
+}
+.item {
+  height: 40px;
+  margin-bottom: 20px;
+}
+.item p {
+  margin: 3px;
+  overflow: hidden;
+}
+.item span:nth-child(1) {
+  float: left;
+}
+.item span:nth-child(2) {
+  float: right;
+}
+.progress {
+  border: 1px solid #3aaf85;
+  border-radius: 3px;
+  padding: 4.5px;
+  height: 20px;
+}
+.progress-level {
+  height: 10px;
+  background: linear-gradient(to right, #fffc00, #df2029);
+  animation: ani;
+  animation-duration: 2s;
+}
+@keyframes ani {
+  0% {
+    width: 0%;
+  }
+}

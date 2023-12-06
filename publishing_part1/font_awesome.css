@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+}
+.item {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+}
+.item input {
+  width: inherit;
+  height: inherit;
+  padding-left: 50px;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  transition: 0.5s;
+  outline: none;
+}
+.item input:focus::placeholder {
+  visibility: hidden;
+}
+.item:hover input[type="text"] {
+  border: 2px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+.item:hover input[type="email"] {
+  border: 2px solid #da552f;
+  box-shadow: 0 0 5px #da552f;
+}
+.item:hover input[type="phone"] {
+  border: 2px solid #3aaf85;
+  box-shadow: 0 0 5px #3aaf85;
+}
+.item:hover input[type="text"]::placeholder {
+  color: dodgerblue;
+}
+.item:hover input[type="email"]::placeholder {
+  color: #da552f;
+}
+.item:hover input[type="phone"]::placeholder {
+  color: #3aaf85;
+}
+.item i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  background: gray;
+  border-radius: 5px 0 0 5px;
+  transition: 0.5s;
+}
+.item:hover .fa-user {
+  background-color: dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+.item:hover .fa-envelope {
+  background-color: #da552f;
+  box-shadow: 0 0 5px #da552f;
+}
+.item:hover .fa-phone {
+  background-color: #3aaf85;
+  box-shadow: 0 0 5px #3aaf85;
+}
