@@ -1,42 +1,58 @@
+* {
+  box-sizing: border-box;
+}
 body {
   line-height: 1.5em;
   margin: 0;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.slider {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.tab_menu {
+  position: relative;
   width: 300px;
   height: 350px;
 }
 input[name="tab"] {
   display: none;
 }
-.content img {
-  display: none;
+.content {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.content .img1,
+.content .img2,
+.content .img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
 }
 .bullet {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: inline-block;
 }
 .bullet label {
+  background-color: lightgray;
   display: inline-block;
   width: 15px;
   height: 15px;
   margin: 1px;
+  margin-bottom: 5px;
   border-radius: 50%;
-  background-color: lightgray;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.5s;
 }
-input[id="tab1"]:checked ~ .content .img1 img,
-input[id="tab2"]:checked ~ .content .img2 img,
-input[id="tab3"]:checked ~ .content .img3 img {
-  display: block;
+input[id="tab1"]:checked ~ .content .img1,
+input[id="tab2"]:checked ~ .content .img2,
+input[id="tab3"]:checked ~ .content .img3 {
+  opacity: 1;
+  visibility: visible;
 }
 input[id="tab1"]:checked ~ .bullet label[for="tab1"],
 input[id="tab2"]:checked ~ .bullet label[for="tab2"],

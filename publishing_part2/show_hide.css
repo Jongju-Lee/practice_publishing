@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+}
+.tab_menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 350px;
+}
+input[name="tab"] {
+  display: none;
+}
+.content {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.content > div {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.bullet {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bullet label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 1px;
+  cursor: pointer;
+  background-color: lightgray;
+  transition: 0.5s;
+}
+input[id="tab1"]:checked ~ .bullet label[for="tab1"],
+input[id="tab2"]:checked ~ .bullet label[for="tab2"],
+input[id="tab3"]:checked ~ .bullet label[for="tab3"] {
+  background-color: crimson;
+}
+input[id="tab1"]:checked ~ .content .img1,
+input[id="tab2"]:checked ~ .content .img2,
+input[id="tab3"]:checked ~ .content .img3 {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.heading {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+.text1,
+.text2,
+.text3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 30px;
+  padding-top: 17px;
+  transform: translateY(-90px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.text1 {
+  background-color: crimson;
+}
+.text2 {
+  background-color: dodgerblue;
+}
+.text3 {
+  background-color: yellowgreen;
+}
+.heading > div span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+input[id="tab1"]:checked ~ .heading .text1,
+input[id="tab2"]:checked ~ .heading .text2,
+input[id="tab3"]:checked ~ .heading .text3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.5s;
+}
