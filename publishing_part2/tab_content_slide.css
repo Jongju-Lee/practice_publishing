@@ -2,41 +2,60 @@
   box-sizing: border-box;
 }
 body {
+  line-height: 1.5em;
   margin: 0;
   height: 100vh;
-  line-height: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.tab-inner {
-  border: 1px solid red;
-  width: 300px;
+.tab_menu {
+  width: 500px;
   height: 350px;
 }
-input[name="tab"] {
+.tab_menu input[name="tab"] {
   display: none;
 }
 .content {
-  position: relative;
+  margin: auto;
   width: 300px;
   height: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-.slide-inner {
-  position: absolute;
+.content .tab_inner {
   width: 900px;
   font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
 .btn {
-  margin-top: 10px;
   text-align: center;
+  margin-top: 20px;
 }
 .btn label {
-  background-color: lightgray;
   display: inline-block;
-  border-radius: 50%;
+  background-color: lightgray;
   width: 15px;
   height: 15px;
+  border-radius: 50%;
   margin: 1px;
-  cursor: pointer;
+  transition: 0.5s;
+}
+input[id="tab1"]:checked ~ .content .tab_inner {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .content .tab_inner {
+  left: -300px;
+}
+input[id="tab3"]:checked ~ .content .tab_inner {
+  left: -600px;
+}
+input[id="tab1"]:checked ~ .btn label[for="tab1"],
+input[id="tab2"]:checked ~ .btn label[for="tab2"],
+input[id="tab3"]:checked ~ .btn label[for="tab3"] {
+  background-color: crimson;
 }
