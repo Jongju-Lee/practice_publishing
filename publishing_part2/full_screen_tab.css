@@ -1,0 +1,77 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  color: #333;
+}
+.container {
+}
+.tab_menu {
+}
+.tab_menu input[name="tab"] {
+  display: none;
+}
+.content {
+  overflow: hidden;
+}
+.content_inner {
+  display: flex;
+  width: 300%;
+  height: 100vh;
+  transition: 0.3s;
+}
+.content_inner div {
+  width: 33.333333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_inner div:nth-child(1) {
+  background-color: teal;
+}
+.content_inner div:nth-child(2) {
+  background-color: dodgerblue;
+}
+.content_inner div:nth-child(3) {
+  background-color: yellowgreen;
+}
+.content_inner div h1 {
+  font-size: 50px;
+  font-weight: normal;
+  color: #fff;
+}
+.bullet {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bullet label {
+  display: inline-block;
+  width: 50px;
+  height: 8px;
+  margin: 2px;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: 0.5s;
+}
+input[id="tab1"]:checked ~ .bullet label[for="tab1"],
+input[id="tab2"]:checked ~ .bullet label[for="tab2"],
+input[id="tab3"]:checked ~ .bullet label[for="tab3"] {
+  background-color: #333;
+}
+input[id="tab1"]:checked ~ .content .content_inner {
+  transform: translateX(0);
+}
+input[id="tab2"]:checked ~ .content .content_inner {
+  transform: translateX(-33.333333%);
+}
+input[id="tab3"]:checked ~ .content .content_inner {
+  transform: translateX(-66.666666%);
+}
