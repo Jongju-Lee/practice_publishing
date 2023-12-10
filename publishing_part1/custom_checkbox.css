@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  justify-content: center;
+  align-items: center;
+}
+.custom input[type="checkbox"] {
+  display: none;
+}
+.custom label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../image/checkbox-02.png) no-repeat;
+  background-position: left center;
+}
+.custom input[id="check"]:checked ~ label em {
+  background-position: right center;
+}
+/* 커스텀 체크박스로 스타일링 */
+/* 14분부터 시청 */
