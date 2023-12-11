@@ -1,0 +1,48 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* \f00c */
+/* fontawesome */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom {
+  display: flex;
+  flex-direction: column;
+}
+.custom input[type="checkbox"] {
+  display: none;
+}
+.custom label {
+  cursor: pointer;
+}
+.custom label::before {
+  content: "\f00c";
+  font-family: "fontawesome";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 14px;
+  color: transparent;
+  transition: 0.2s;
+}
+.custom input[type="checkbox"]:checked + label::before {
+  color: white;
+  background-color: crimson;
+  border-color: transparent;
+}
+.custom input[type="checkbox"] + label:active::before {
+  transform: scale(0);
+}

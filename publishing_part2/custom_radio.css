@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* checkbox */
+.custom_check {
+}
+.custom_check input {
+  display: none;
+}
+.custom_check label {
+  cursor: pointer;
+}
+.custom_check label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+  background: url(../image/checkbox-03.png) no-repeat;
+  background-position: left center;
+}
+.custom_check input[id="checkbox1"]:checked + label em {
+  background-position: right center;
+}
+/* radio */
+.custom_radio {
+}
+.custom_radio input {
+  display: none;
+}
+.custom_radio label {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.custom_radio label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+  background: url(../image/radio-01.png) no-repeat;
+  background-position: left center;
+}
+.custom_radio input:checked + label em {
+  background-position: right center;
+}
+.custom_radio input:checked + label {
+  color: crimson;
+}
