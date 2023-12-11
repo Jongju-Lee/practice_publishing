@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card img {
+}
+
+.content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  padding-top: 170px;
+  transition: 0.5s;
+}
+.card:nth-child(1) .content {
+  background: linear-gradient(0deg, crimson, transparent);
+}
+.card:nth-child(2) .content {
+  background: linear-gradient(0deg, dodgerblue, transparent);
+}
+.card:nth-child(3) .content {
+  background: linear-gradient(0deg, yellowgreen, transparent);
+}
+.content h2 {
+}
+.content h2 span {
+  margin-top: 10px;
+  display: block;
+  font-size: 18px;
+  color: gold;
+}
+.sns {
+  font-family: "fontawesome";
+}
+.sns a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  transition: 0.3s;
+}
+.sns a:hover {
+  text-shadow: 0 0 10px #fff;
+}
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.card:hover .content {
+  top: 0;
+}
