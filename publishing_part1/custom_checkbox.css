@@ -6,23 +6,53 @@ body {
   margin: 0;
   height: 100vh;
   color: #333;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* checkbox */
+.custom {
 }
 .custom input[type="checkbox"] {
   display: none;
 }
+.custom label {
+}
 .custom label em {
+  background: url(../image/checkbox-03.png) no-repeat;
+  background-position: left center;
   display: inline-block;
   width: 18px;
   height: 18px;
   vertical-align: middle;
   margin-right: 5px;
-  background: url(../image/checkbox-02.png) no-repeat;
-  background-position: left center;
 }
-.custom input[id="check"]:checked ~ label em {
+.custom input[type="checkbox"]:checked + label em {
   background-position: right center;
 }
-/* 커스텀 체크박스로 스타일링 */
-/* 14분부터 시청 */
+/* radio */
+.grade {
+}
+.grade input[name="grade"] {
+  display: none;
+}
+.grade input[name="grade"] ~ label {
+  cursor: pointer;
+  margin: 5px;
+}
+.grade label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+  background: url(../image/radio-01.png) no-repeat;
+  background-position: left center;
+}
+.grade input[type="radio"]:checked + label em {
+  background-position: right center;
+}
+.grade input[type="radio"]:checked + label {
+  color: crimson;
+}
