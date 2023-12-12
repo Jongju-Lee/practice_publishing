@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@600&family=Raleway&display=swap");
+* {
+  font-family: "Kalnia", serif;
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 8em;
+  text-transform: uppercase;
+  margin: 0;
+  /* background-color: red; */
+  background: linear-gradient(90deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+div {
+  border: 20px dashed #000;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background-color: red;
+  background-clip: padding-box;
+  display: none;
+}
