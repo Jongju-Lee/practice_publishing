@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+}
+header {
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  padding: 8px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+section {
+  position: relative;
+  background-color: #eee;
+  height: calc(100vh - 48px);
+}
+.login_form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+}
+.login_form h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+.login_btn {
+}
+.login_btn a {
+  display: block;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 350px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.login_btn a:hover {
+  opacity: 1;
+}
+.login_btn a:nth-of-type(1) {
+  background: #fff url(../naver_image/logo-mobile.png) no-repeat center left
+    10px;
+  color: #333;
+}
+.login_btn a:nth-of-type(2) {
+  background: #aaa url(../naver_image/logo-email.png) no-repeat center left 13px;
+}
+.login_btn a:nth-of-type(3) {
+  background: #2db400 url(../naver_image/logo-naver.png) no-repeat center left
+    13px;
+}
+.login_btn a:nth-of-type(4) {
+  background: #1877f2 url(../naver_image/logo-facebook.png) no-repeat center
+    left 13px;
+}
+.login_btn a:nth-of-type(5) {
+  background: #00c300 url(../naver_image/logo-line.png) no-repeat center left
+    13px;
+}
+.login_btn span {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+.login_btn span::before,
+.login_btn span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: lightgray;
+  width: 43%;
+  height: 1px;
+  vertical-align: middle;
+}
+.login_btn span::before {
+  left: 0;
+}
+.login_btn span::after {
+  right: 0;
+}
+.login_footer {
+}
+.keep_login {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.keep_login input {
+  display: none;
+}
+.keep_login label {
+  float: left;
+  cursor: pointer;
+}
+.keep_login label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom;
+  margin-right: 7px;
+  background: url(../image/checkbox-01.png) no-repeat;
+  background-position: center left;
+}
+.keep_login input[id="chk1"]:checked + label::before {
+  background-position: center right;
+}
+.sign_up {
+  font-size: 14px;
+}
+.sign_up div {
+}
+.sign_up div a {
+  text-decoration: none;
+  color: #333;
+}
+.sign_up div a:hover {
+  text-decoration: underline;
+}
